@@ -1,3 +1,5 @@
+// WORK IN PROGRESS
+
 const isValid = function (string) {
   const a = Array.from(string);
 
