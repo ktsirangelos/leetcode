@@ -9,6 +9,7 @@ const longestCommonPrefix = function (arrayOfStrings) {
     let slicePosition = 1;
     let currentPrefix = arrayOfStrings[0].slice(0, slicePosition);
     let commonPrefix = "";
+
     while (
       counter == storeCounter &&
       commonPrefix.length < arrayOfStrings[0].length
@@ -18,12 +19,14 @@ const longestCommonPrefix = function (arrayOfStrings) {
           counter++;
         }
       }
+
       if (counter == arrayOfStrings.length * slicePosition) {
         commonPrefix = arrayOfStrings[0].slice(0, slicePosition++);
         currentPrefix = arrayOfStrings[0].slice(0, slicePosition);
         storeCounter = counter;
       }
     }
+
     return storeCounter > 0 ? commonPrefix : "";
   }
 };
