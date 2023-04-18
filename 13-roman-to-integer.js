@@ -1,15 +1,9 @@
-// Given a roman numeral, convert it to an integer.
+// Given a roman numeral (string), convert it to an integer (number).
 
-const romanToInt = function (s) {
-  let int = 0;
-  let string = s;
-  const transform = function ([a, b]) {
-    if (string.includes(a)) {
-      int += b;
-      string = string.replace(a, "");
-    }
-  };
-  const relationships = [
+const romanToInt = function (romanString) {
+  let targetInteger = 0;
+
+  const pairs = [
     ["MMM", 3000],
     ["MM", 2000],
     ["CM", 900], // changed order
@@ -41,6 +35,14 @@ const romanToInt = function (s) {
     ["II", 2],
     ["I", 1],
   ];
-  relationships.forEach((array) => transform(array));
-  return int;
+
+  const convert = function ([romanSubString, integer]) {
+    if (romanString.includes(romanSubString)) {
+      romanString = romanString.replace(romanSubString, "");
+      targetInteger += integer;
+    }
+  };
+
+  pairs.forEach((pair) => convert(pair));
+  return targetInteger;
 };

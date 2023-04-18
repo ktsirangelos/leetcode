@@ -1,7 +1,7 @@
-// Given an integer x, return true if x is a palindrome, and false otherwise.
+// Given an integer, return true if it is a palindrome and false otherwise.
 
-const isPalindrome = function (x) {
-  const str = x.toString();
-  const reversedStr = str.split("").reverse().join("");
-  return str === reversedStr;
+const isPalindrome = function (integer) {
+  const string = integer.toString();
+  const reversedString = string.split("").reverse().join("");
+  return string === reversedString;
 };
