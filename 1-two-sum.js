@@ -1,5 +1,3 @@
-// 1. Two Sum
-
 // Given an array of integers and an target integer, return the indices of two integers which add up to the target.
 
 const twoSum = function (array, target) {
