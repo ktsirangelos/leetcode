@@ -1,5 +1,3 @@
-// Write a function to find the longest common prefix string amongst an array of strings.
-
 const longestCommonPrefix = function (arrayOfStrings) {
   if (arrayOfStrings.length == 1) {
     return arrayOfStrings.includes("") ? "" : arrayOfStrings[0];

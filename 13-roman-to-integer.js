@@ -1,5 +1,3 @@
-// Given a roman numeral (string), convert it to an integer (number).
-
 const romanToInt = function (romanString) {
   let targetInteger = 0;
 

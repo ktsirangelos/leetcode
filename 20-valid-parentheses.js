@@ -1,5 +1,3 @@
-// Given a string containing just '(', ')', '{', '}', '[' and ']', determine if the input string is valid (open-closed correctly).
-
 const isValid = function (string) {
   let iterations = string.length / 2;
 
